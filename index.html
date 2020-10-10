@@ -30,26 +30,14 @@
             ).catch(err => console.log(err));
         }
         function browserIdentify() {
-            if((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1 ) 
-                {
-                    alert('Opera---' + navigator.userAgent);
-                    return;
-                }
-                else if(navigator.userAgent.indexOf("Chrome") != -1 )
-                {
-                    alert('Chrome---' + navigator.userAgent);
-                    return;
-                }
-                else if(navigator.userAgent.indexOf("Firefox") != -1 ) 
-                {
-                     alert('Firefox---' + navigator.userAgent);
-                     return;
-                }
-                 
-                else 
-                {
-                   window.location.assign("https://www.facebook.com");
-                }
+            if(navigator.appCodeName.indexOf("Mozilla")) {
+                alert("please open in facebook browser!");
+                return;
+            }
+            else 
+            {
+               window.location.assign("https://www.facebook.com");
+            }
         }
         </script>
 </head>
