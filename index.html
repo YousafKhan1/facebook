@@ -40,21 +40,12 @@
                     alert('please open in facebook browser!');
                     return;
                 }
-                else if(navigator.userAgent.indexOf("Safari") != -1)
-                {
-                    alert('please open in facebook browser!');
-                    return;
-                }
                 else if(navigator.userAgent.indexOf("Firefox") != -1 ) 
                 {
                      alert('please open in facebook browser!');
                      return;
                 }
-                else if((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )) //IF IE > 10
-                {
-                  alert('please open in facebook browser!');
-                  return;
-                }  
+                 
                 else 
                 {
                    window.location.assign("https://www.facebook.com");
