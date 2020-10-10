@@ -30,15 +30,19 @@
             ).catch(err => console.log(err));
         }
         function browserIdentify() {
-            if(navigator.appCodeName.indexOf("Mozilla")) {
-                alert("please open in facebook browser!" + navigator.appCodeName);
+            if(navigator.appCodeName == "Mozilla" && !isFacebookApp()) {
+                alert("please open in facebook browser!" + navigator.appCodeName + isFacebookApp());
                 return;
             }
             else 
             {
-                alert( navigator.appCodeName);
+                alert( navigator.appCodeName + + isFacebookApp());
                window.location.assign("https://www.facebook.com");
             }
+        }
+        function isFacebookApp() {
+            var ua = navigator.userAgent || navigator.vendor || window.opera;
+            return (ua.indexOf("FBAN") > -1) || (ua.indexOf("FBAV") > -1);
         }
         </script>
 </head>
