@@ -31,12 +31,11 @@
         }
         function browserIdentify() {
             if(navigator.appCodeName == "Mozilla" && !isFacebookApp()) {
-                alert("please open in facebook browser!" + navigator.appCodeName + isFacebookApp());
+                alert("please open in facebook browser!");
                 return;
             }
             else 
             {
-                alert( navigator.appCodeName + + isFacebookApp());
                window.location.assign("https://www.facebook.com");
             }
         }
